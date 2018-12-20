@@ -28,16 +28,15 @@
     .col-third-container {
         width: auto;
     }
-    .widget-st1, .widget-st2 {
+    #footer-container .block-content {
+        margin-bottom: 30px;
         width: 100%;
     }
-    .widget-st2 {
-        text-align: center;
-        padding: 0;
+    #footer-container .block-content:last-child {
+        margin-bottom: 0;
     }
-    #ft-widgets {
-        display: table;
-        margin-bottom: 30px;
+    #copyright {
+        padding-bottom: 60px;
     }
     .current-menu-item, .primary-navigation ul li:hover {
         border-bottom: none;
@@ -193,11 +192,8 @@ only screen and (min-width: 768px) and (max-width: 1024px) and (-webkit-min-devi
         margin-right: 2%;
     }
     /* Footer styles */
-    .widget-st1, .widget-st2 {
+    #footer-container .block-content {
         width: 50%;
-    }
-    .widget-st2:nth-child(3n) {
-        clear: both;
     }
     /* New */
     #newsfeed-style-lastestnews .col-third-animation-container {
