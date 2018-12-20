@@ -1371,75 +1371,55 @@ q {
     margin-right: 4%;
 }
 
-/* --- FOOTER --- */
+/* 
+* Footer
+*/
 footer {
-    height: 100%;
     background-color: #101010;
-    float: left;
+    height: 100%;
     margin-top: 30px;
 }
 
-#ft-widgets {
-    width: 90%;
-    max-width: 1200px;
-    min-height: 360px;
+#footer-container {
+    padding-top: 30px;
+    padding-bottom: 30px;
     margin: 0 auto;
+    min-height: 360px;
+    max-width: 1200px;
+    width: 80%;
 }
 
-#footer-menu li .sub-menu {
-    margin-left: 5px;
-    margin-bottom: 10px;
-}
-
-/* Widgets Footer */
-.widget-st1 > ul {
-    padding: 0;
-}
-.widget-st2 .menu > ul,
-.widget-st2 > ul {
-    /*padding: 0;*/
-}
-.widget-st1,
-.widget-st2 {
-    width: 25%;
+.block-content {
+    color: #fff;
     float: left;
-    margin-top: 25px;
-    color: #fff;
+    text-align: center;
+    width: 25%;
 }
-.widget-st1 {
-   text-align: center;
-}
-.widget-st1 h3,
-.widget-st2 h3 {
-    font-size: 1rem;
+
+.block-content h4 {
     color: #7CB342;
+    font-size: 1rem;
     margin-bottom: 20px;
+    text-transform: uppercase;
 }
-.widget-st2 {
-    padding-left: 20px;
+
+.block-content p {
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
-.widget-st2 h4 {
-    margin: 0;
-}
-.widget-st2 p {
-    margin: 0 0 1em;
-}
-.widget-st1 ul,
-.widget-st2 ul {
+
+.social-media {
     list-style: none;
-}
-.widget-st1 ul li a,
-.widget-st2 ul li a {
-    color: #fff;
-    text-decoration: none;
+    padding-left: 0;
+    margin: 0;
 }
 
 .social-media li {
-    margin: 20px 10px;
-    display: block;
+    margin-bottom: 20px;
 }
 
 .social-media li a span {
+    color: #fff;
     font-size: 2em;
 }
 
@@ -1451,15 +1431,19 @@ footer {
 }
 
 /* Copyright */
-#copyright {
+#copyright-container {
+    background-color: #000;
     clear: both;
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px 20px 30px;
+}
+
+#copyright-content {
     color: #fff;
+    padding-top: 15px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+    padding-left: 20px;
     text-align: center;
-    border-top: 1px solid #808080;
+    margin: 0 auto;
 }
 
 /* Extra */
