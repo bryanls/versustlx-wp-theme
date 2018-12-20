@@ -21,8 +21,8 @@
     <div id="site-topbar-container">
         <div id="bar-tdsn-container">
             <div id="timedate-content">
-                <div id="site-date"></div>
-                <div id="site-hour"></div>
+                <span id="site-date"></span>
+                <span id="site-hour"></span>
             </div>
             <div class="socialnetwork-content">
             <a class="fb" href="https://www.facebook.com/versustlx/?fref=nf" target="_blank"><span class="fa fa-facebook-official" aria-hidden="true"></span></a>
