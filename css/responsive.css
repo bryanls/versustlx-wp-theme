@@ -35,7 +35,7 @@
     #footer-container .block-content:last-child {
         margin-bottom: 0;
     }
-    #copyright {
+    #copyright-container {
         padding-bottom: 60px;
     }
     .current-menu-item, .primary-navigation ul li:hover {
@@ -131,9 +131,6 @@ only screen and (min-width: 320px) and (max-width: 767px) and (-webkit-min-devic
     .article-cat-info h2 a {
         font-size: .8em;
     }
-    #copyright {
-        width: auto;
-    }
     /*New style*/
     #newsfeed-style-lastestnews .col-third-animation-container {
         width: 100%;
@@ -156,7 +153,6 @@ only screen and (min-width: 320px) and (max-width: 767px) and (-webkit-min-devic
     .banner-half-container .banner-half:first-child {
         margin-bottom: 30px;
     }
-    /* */
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px),
