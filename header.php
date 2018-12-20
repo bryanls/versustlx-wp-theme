@@ -21,15 +21,15 @@
     <div id="site-topbar-container">
         <div id="bar-tdsn-container">
             <div id="timedate-content">
-                <div id="site-date"></div>
-                <div id="site-hour"></div>
+                <span id="site-date"></span>
+                <span id="site-hour"></span>
             </div>
             <div class="socialnetwork-content">
-            <a class="fb" href="https://www.facebook.com/versustlx/?fref=nf" target="_blank"><span class="fa fa-facebook-official" aria-hidden="true"></span></a>
-            <a class="tw" href="https://twitter.com/versustlx" target="_blank"><span class="fa fa-twitter" aria-hidden="true"></span></a>
-            <a class="yt" href="https://www.youtube.com/channel/UCoc2dJY1Q5Eac959eW-nl1A" target="_blank"><span class="fa fa-youtube-play" aria-hidden="true"></span></a>
-            <a class="sc" href="https://m.soundcloud.com/versus-tlx" target="_blank"><span class="fa fa-soundcloud" aria-hidden="true"></span></a>
-            <a class="ins" href="https://www.instagram.com/versustlx/" target="_blank"><span class="fa fa-instagram" aria-hidden="true"></span></a>
+                <a class="fb" href="https://www.facebook.com/versustlx/?fref=nf" target="_blank"><span class="fa fa-facebook-official" aria-hidden="true"></span></a>
+                <a class="tw" href="https://twitter.com/versustlx" target="_blank"><span class="fa fa-twitter" aria-hidden="true"></span></a>
+                <a class="yt" href="https://www.youtube.com/channel/UCoc2dJY1Q5Eac959eW-nl1A" target="_blank"><span class="fa fa-youtube-play" aria-hidden="true"></span></a>
+                <a class="sc" href="https://m.soundcloud.com/versus-tlx" target="_blank"><span class="fa fa-soundcloud" aria-hidden="true"></span></a>
+                <a class="ins" href="https://www.instagram.com/versustlx/" target="_blank"><span class="fa fa-instagram" aria-hidden="true"></span></a>
             </div>
         </div>
     </div>
