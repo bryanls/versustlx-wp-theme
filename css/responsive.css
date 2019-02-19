@@ -35,9 +35,6 @@
     #footer-container .block-content:last-child {
         margin-bottom: 0;
     }
-    #copyright-container {
-        padding-bottom: 60px;
-    }
     .current-menu-item, .primary-navigation ul li:hover {
         border-bottom: none;
     }
@@ -84,6 +81,19 @@ only screen and (min-width: 320px) and (max-width: 767px) and (-webkit-min-devic
     .latest-news article {
         margin-bottom: 30px;
         width: auto;
+    }
+    /* Post and Pages */
+    .entry-title {
+        font-size: 1.75em;
+    }
+    .entry-meta .entry-author,
+    .entry-meta .entry-date {
+        display: block;
+    }
+    
+    .entry-meta .entry-author {
+        margin-right: 0;
+        margin-bottom: 5px;
     }
     /* Columns - Category style*/
     .col-twothirds-main {

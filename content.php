@@ -1,13 +1,12 @@
-<article class="clearfix">
-    <h1><?php the_title(); ?></h1>
-    <div class="date-info">
-        <p class="date-entry">Por <span class="author-entry"><?php the_author(); ?></span> | <?php the_time('j F, Y') ?> a las <?php the_time(); ?></p>
+<div class="entry-header">
+    <div class="category-links"><?php the_category(', '); ?></div>
+    <h1 class="entry-title"><?php the_title(); ?></h1>
+    <div class="entry-meta">
+        <span class="entry-author"><?php the_author(); ?></span>
+        <span class="entry-date"><?php the_time('j F, Y') ?> - <?php the_time(); ?></span>
     </div>
-    <div class="post-cats"><?php the_category(', '); ?></div>
-    <div class="thumb">
-        <?php if ( has_post_thumbnail() ) { the_post_thumbnail ( 'vs-big-thumb' ); } ?>
-    </div>
-    <div class="extract">.
-        <?php the_content(); ?>
-    </div>
-</article>
+</div>
+<div class="entry-content">
+    <div class="entry-thumbnail"><?php if ( has_post_thumbnail() ) { the_post_thumbnail ( 'vs-big-thumb' ); } ?></div>
+    <div class="entry-text"><?php the_content(); ?></div>
+</div>

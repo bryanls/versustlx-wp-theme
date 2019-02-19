@@ -2,7 +2,7 @@
 Theme Name: versustlx
 Theme URI: www.versustlx.com.mx
 Description: Sitio Web de Noticias y Reportajes del Estado de Tlaxcala, México.
-Version: 3.1.1
+Version: 3.1.3
 Author: Bryan LS
 Author URI: ...
 */
@@ -1039,48 +1039,59 @@ header {
 }
 
 /**
-* single.php
+* Content
 */
-.single-article h1,
-.articles-list-cat h1 {
+.category-links a {
+    color: #4caf50;
+    text-decoration: none;
+}
+
+/**
+* Post and Pages
+*/
+.entry-container {
+    border-bottom: 2px dashed #e6e6e6;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+
+.entry-header {
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+.entry-title {
     font-size: 2em;
     font-weight: 700;
 }
 
-.single-article h1 a, .articles-list-cat h1 a {
-    color: #000;
+.entry-author {
+    margin-right: 15px;
+}
+.entry-author:before {
+    content: '\f2c0';
+    font-family: FontAwesome;
+    margin-right: 5px;
+}
+.entry-date:before {
+    content: '\f017';
+    font-family: FontAwesome;
+    margin-right: 5px;
 }
 
-.single-article p {
-    display: block;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    margin-left: 0;
-    margin-right: 0;
-}
-
-.single-article .post-categories,
-.articles-list-cat .post-categories,
-.page-article .post-categories {
-    list-style: none;
-    padding: 0;
-    margin-bottom: 2em;
-}
-
-.single-article article {
-    border-bottom: 2px dashed #e6e6e6;
-    padding-bottom: 20px;
-    margin-bottom: 20px;
-}
-
-.single-article .thumb {
+.entry-thumbnail {
+    margin-bottom: 15px;
     width: 100%;
 }
 
-.single-article .thumb img {
+.entry-thumbnail img {
     width: 100%;
     height: 100%;
     margin-bottom: 20px;
+}
+
+.entry-text {
+    font-size: 16px;
 }
 
 /**
@@ -1134,34 +1145,7 @@ header {
     text-transform: uppercase;
     font-weight: 700;
 }
-/**
-*
-**/
-.post-categories li {
-    display: inline-block;
-    vertical-align: top;
-}
 
-.post-categories li a,
-.post-cats a {
-    color: #4caf50;
-    text-decoration: none;
-}
-
-.articles-cat-list .post-cats {
-    margin-bottom: 10px;
-}
-.post-cats {
-    margin-bottom: 30px;
-}
-
-.date-info {
-    margin-bottom: 15px;
-}
-
-.date-info .date-entry .author-entry {
-    font-weight: 700;
-}
 
 /*
 *
@@ -1601,6 +1585,6 @@ img[class*="wp-image-"] {
 .alignnone {
     margin: 5px 20px 20px 0;
 }
-.single-article table {
+.entry-content table {
     border-collapse: collapse;
 }
