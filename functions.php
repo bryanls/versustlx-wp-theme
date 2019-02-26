@@ -95,7 +95,7 @@ function vs_widgets_setup() {
         'before_title' => '<span class="header-banner">',
         'after_title' => '</span>',
     ));
-    
+
     register_sidebar( array(
         'name' => 'Banner 3',
         'id' => 'banner-3',
