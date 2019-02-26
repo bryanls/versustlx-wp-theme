@@ -28,6 +28,12 @@
     .col-third-container {
         width: auto;
     }
+    /* Pagination */
+    .pagination {
+        margin-bottom: 60px;
+        text-align: center;
+    }
+    
     #footer-container .block-content {
         margin-bottom: 30px;
         width: 100%;
@@ -95,6 +101,17 @@ only screen and (min-width: 320px) and (max-width: 767px) and (-webkit-min-devic
         margin-right: 0;
         margin-bottom: 5px;
     }
+    /* Archive */
+    .article-thumbnail {
+        width: 100%;
+    }
+    .article-content {
+        margin-left: 0;
+    }
+    .article-content .entry-extract {
+        display: none;
+    }
+
     /* Columns - Category style*/
     .col-twothirds-main {
         width: 100%;
@@ -124,16 +141,7 @@ only screen and (min-width: 320px) and (max-width: 767px) and (-webkit-min-devic
     .video-wrap {
         padding: 0 15px 15px;
     }
-    /* Archive */
-    .article-thumbnail {
-        width: 100%;
-    }
-    .article-content {
-        margin-left: 0;
-    }
-    .article-content .entry-extract {
-        display: none;
-    }
+
     /*New style*/
     #newsfeed-style-lastestnews .col-third-animation-container {
         width: 100%;
