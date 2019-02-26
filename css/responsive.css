@@ -124,22 +124,15 @@ only screen and (min-width: 320px) and (max-width: 767px) and (-webkit-min-devic
     .video-wrap {
         padding: 0 15px 15px;
     }
-
-    .article-cat-thumb {
+    /* Archive */
+    .article-thumbnail {
         width: 100%;
     }
-    .article-cat-info {
-        padding-left: 0;
-        width: auto;
+    .article-content {
+        margin-left: 0;
     }
-    .article-cat-info .extract {
+    .article-content .entry-extract {
         display: none;
-    }
-    .articles-cat-list > .post-categories li a {
-        font-size: 1.5em;
-    }
-    .article-cat-info h2 a {
-        font-size: .8em;
     }
     /*New style*/
     #newsfeed-style-lastestnews .col-third-animation-container {
