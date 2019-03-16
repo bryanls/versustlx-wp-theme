@@ -47,7 +47,7 @@ add_theme_support( 'post-thumbnails' );
 add_image_size( 'vs-medium-thumb', 360, 240, array( 'center', 'top' ) ); // 3:2 - 1.5
 add_image_size( 'vs-small-thumb', 120, 80, true );
 add_image_size( 'vs-big-thumb', 720, 480, true );
-add_image_size( 'vs-list-thumb', 240, 160, true );
+add_image_size( 'vs-list-thumb', 240, 192, true );
 add_image_size( 'vs-custom-big-thumb', 400, 400, true );
 add_image_size( 'vs-custom-medium-thumb', 400, 200, true );
 
