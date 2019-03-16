@@ -14,7 +14,7 @@
                 </div>
                 <div class="article-content">
                     <div class="entry-header">
-                        <div class="category-links"><?php the_category(', '); ?></div>
+                        <div class="category-links"><?php the_category(' '); ?></div>
                         <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
                         <div class="entry-meta">
                             <span class="entry-author"><?php the_author(); ?></span>

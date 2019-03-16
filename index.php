@@ -137,22 +137,21 @@
                             </div>
                             <div class="featured-item-info">
                                 <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-                                <div class="date"><?php the_time('j F, Y') ?> - <?php the_time() ?></div>
-                                <div class="info"><?php the_excerpt(); ?></div>
+                                <div class="entry-date"><?php the_time('j F, Y') ?></div>
+                                <div class="entry-excerpt"><?php the_excerpt(); ?></div>
                             </div>
                         </div>
-
                         <div class="justice-news-items">
                         <?php else: ?>
                             <div class="justice-item-content">
                                 <div class="justice-item-img">
                                     <?php if ( has_post_thumbnail() ) { ?>
                                     <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'vs-small-thumb' ); ?></a>
-                                    <?php } else { the_excerpt(); } ?>
+                                    <?php } ?>
                                 </div>
                                 <div class="justice-item-info">
                                     <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-                                    <div class="date"><?php the_time('j F, Y') ?> - <?php the_time() ?></div>
+                                    <div class="entry-date"><?php the_time('j F, Y') ?></div>
                                 </div>
                             </div>
                         <?php endif; endwhile; ?>
