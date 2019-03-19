@@ -502,10 +502,10 @@ header {
 */
 #mobile-nav {
     background-color: #fff;
-    display: -webkit-flex;
+    /*display: -webkit-flex;
     display: flex;
     -webkit-flex-direction: column;
-    flex-direction: column;
+    flex-direction: column;*/
     padding-right: 15px;
     padding-left: 15px;
     position: absolute;
@@ -535,18 +535,19 @@ header {
 #mobile-nav .socialnetwork-content {
     border-bottom: 1px solid #eee;
     border-top: 1px solid #eee;
-    padding-top: 5px;
+    padding: 10px;
     float: none;
     text-align: center;
-    height: 100px;
+    height: auto;
     width: 100%;
 }
 
 #mobile-nav .socialnetwork-content a {
     color: #262626;
-    font-size: 1.5em;
-    margin-left: 15px;
+    font-size: 1.75em;
     padding: 5px;
+    margin-left: 3%;
+    margin-right: 3%;
     text-align: center;
 }
 
@@ -579,6 +580,13 @@ header {
     background-color: #fff;
     height: 100%;
     overflow-y: auto;
+}
+
+.menu-content > ul {
+    height: 100%;
+    overflow-y: auto;
+    margin-bottom: 0;
+    padding-bottom: 220px!important;
 }
 
 .menu-content ul {
