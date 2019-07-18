@@ -3,8 +3,17 @@
 <div id="main-container">
     <div id="newsfeed-style-lastestnews" class="clearfix">
        <?php 
+        $numb_sticky_posts = sizeof( get_option( 'sticky_posts' ) );
+        
+        if (is_sticky()){
+            $numb_posts_displayed = 4 - $numb_sticky_posts;
+            echo 'Remain posts: ' . $numb_posts_displayed;
+        } else {
+            $numb_posts_displayed = 4;
+        }
+        
         $args = array(
-            'posts_per_page' => 4,
+            'posts_per_page' => $numb_posts_displayed,
             'orderby' => 'post_date',
         );
         $query = new WP_Query( $args );
