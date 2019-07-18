@@ -7,10 +7,10 @@
         </div>
         <div class="block-content">
             <h4>Información</h4>
-            <p><strong>Directora General</strong></p>
-            <p>Viridiana Salazar</p><br>
-            <p><strong>Sub Director</strong></p>
+            <p><strong>Director General</strong></p>
             <p>Rigoberto Sánchez</p><br>
+            <p><strong>Sub Director</strong></p>
+            <p>Javier García</p><br>
             <p><strong>Jefe de Información</strong></p>
             <p>Fidel Hernández</p><br>
             <p><strong>Ventas</strong><p>
