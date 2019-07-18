@@ -7,11 +7,10 @@
         
         if (is_sticky()){
             $numb_posts_displayed = 4 - $numb_sticky_posts;
-            echo 'Remain posts: ' . $numb_posts_displayed;
         } else {
             $numb_posts_displayed = 4;
         }
-        
+
         $args = array(
             'posts_per_page' => $numb_posts_displayed,
             'orderby' => 'post_date',
@@ -23,8 +22,9 @@
             <div class="col-third-animation-container big-grid-post-1">
                 <div class="col-third-animation-content">
                     <div class="post-img-bg">
-                    <?php if( has_post_thumbnail() ) { ?>
-                        <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'vs-custom-big-thumb' ); ?></a><?php } else { echo '* Sin imagen representativa'; } ?>
+                        <a href="<?php the_permalink(); ?>">
+                        <?php if( has_post_thumbnail() ) { the_post_thumbnail( 'vs-custom-big-thumb' ); } else { echo '<span>* Sin imagen representativa.</span>'; } ?>
+                        </a>
                     </div>
                     <div class="post-title">
                         <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
@@ -36,8 +36,9 @@
         <?php elseif ( $query->current_post == 1 && !is_paged() ) : ?>
                 <div class="col-third-animation-content">
                     <div class="post-img-bg">
-                    <?php if( has_post_thumbnail() ) { ?>
-                        <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'vs-custom-big-thumb' ); ?></a><?php } else { echo '* Sin imagen representativa'; } ?>
+                        <a href="<?php the_permalink(); ?>">
+                        <?php if( has_post_thumbnail() ) { the_post_thumbnail( 'vs-custom-big-thumb' ); } else { echo '<span>* Sin imagen representativa.</span>'; } ?>
+                        </a>
                     </div>
                     <div class="post-title">
                         <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
@@ -49,8 +50,9 @@
        <?php else: ?>
             <div class="col-third-animation-content medium-grid-post-1">
                 <div class="post-img-bg">
-                 <?php if( has_post_thumbnail() ) { ?>
-        			<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'vs-custom-medium-thumb' ); ?></a><?php } else { echo '* Sin imagen representativa'; } ?>
+                    <a href="<?php the_permalink(); ?>">
+                    <?php if( has_post_thumbnail() ) { the_post_thumbnail( 'vs-custom-medium-thumb' ); } else { echo '<span>* Sin imagen representativa.</span>'; } ?>
+                    </a>
         		</div>
         		<div class="post-title">
                     <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>

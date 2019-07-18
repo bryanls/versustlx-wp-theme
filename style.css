@@ -2,7 +2,7 @@
 Theme Name: versustlx
 Theme URI: www.versustlx.com.mx
 Description: Sitio Web de Noticias y Reportajes del Estado de Tlaxcala, México.
-Version: 3.1.3
+Version: 3.4.5
 Author: Bryan LS
 Author URI: ...
 */
@@ -742,6 +742,11 @@ header {
     overflow: hidden;
 }
 
+.post-img-bg a {
+    color: #000;
+    text-decoration: none;
+}
+
 .post-img-bg a::before {
     content: '';
 	background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #000 100%);
@@ -1261,6 +1266,10 @@ header {
 .featured-item .item-info {
     padding-bottom: 15px;
 }
+.featured-item .item-info h2 {
+    line-height: 1;
+    margin-top: 15px;
+}
 
 .featured-item .item-info a {
     color: #000;
@@ -1488,7 +1497,7 @@ section.widget_media_video {
 }
 
 /* Widget JP */
-.extract #jp-relatedposts h3.jp-relatedposts-headline {
+.entry-text #jp-relatedposts h3.jp-relatedposts-headline {
     background: #eee;
     clear: both;
     display: block;
@@ -1499,14 +1508,22 @@ section.widget_media_video {
     padding: 6px 20px;
 }
 
-.extract #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-title a {
+.entry-text #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-title a {
     color: #000;
     font-weight: 700;
     text-decoration: none;
 }
 
-.extract #jp-relatedposts h3.jp-relatedposts-headline em::before {
+.entry-text #jp-relatedposts h3.jp-relatedposts-headline em::before {
     display: none;
+}
+
+.entry-text #jp-relatedposts .jp-relatedposts-items-visual h4.jp-relatedposts-post-title {
+    margin-top: 10px;
+}
+
+.entry-text #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-title a:hover {
+    text-decoration: none;
 }
 
 /* Facebook Comments */
