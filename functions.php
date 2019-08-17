@@ -31,8 +31,8 @@ function wpdocs_theme_name_wp_title( $title, $sep ) {
 add_filter( 'wp_title', 'wpdocs_theme_name_wp_title', 10, 2 );
 
 function versus_scripts_styles() {
-    wp_enqueue_style( 'versus-style', get_stylesheet_uri(), array(), '3.1.2' );
-    wp_enqueue_style( 'versus-mobile-style', get_template_directory_uri() . '/css/responsive.css', array(), '3.0.8' );
+    wp_enqueue_style( 'versus-style', get_stylesheet_uri(), array(), '3.4.5' );
+    wp_enqueue_style( 'versus-mobile-style', get_template_directory_uri() . '/css/responsive.css', array(), '3.3.0' );
     wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/font-awesome/css/font-awesome.min.css', array(), '4.7.0' );
     wp_enqueue_script( 'versus-script', get_template_directory_uri() . '/js/main_nav.js', array(), '2.2.0' );
     wp_enqueue_script( 'versus-timestamp-script', get_template_directory_uri() . '/js/date_hour.js', array(), '2.0.0', true );
