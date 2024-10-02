@@ -1,7 +1,7 @@
     <div class="col-third-container">
       
        <section class="category-container">
-            <div class="column-header bl-vsblack"><p class="bg-vsblack">Municipios</p></div>
+            <div class="col-header bl-vsblack"><p class="bg-vsblack">Municipios</p></div>
             <div class="newsfeed-style-2">
             <?php
             $args8 = array(
@@ -41,7 +41,7 @@
         </section>
         
         <section class="category-container">
-            <div class="column-header bl-vsblack"><p class="bg-vsblack">Destacado</p></div>
+            <div class="col-header bl-vsblack"><p class="bg-vsblack">Destacado</p></div>
             <div class="newsfeed-style-3">
             <?php
             $args9 = array(
@@ -81,7 +81,7 @@
         </section>
         
         <section class="category-container">
-            <div class="column-header bl-vsblack"><p class="bg-vsblack">Reportajes</p></div>
+            <div class="col-header bl-vsblack"><p class="bg-vsblack">Reportajes</p></div>
             <div class="newsfeed-style-1">
                 <ul class="newsfeed-list-items clearfix">
                     <?php
@@ -106,6 +106,43 @@
             </div>
         </section>
         
+        <section class="category-container">
+            <div class="col-header bl-vsblack"><p class="bg-vsblack">Elecciones 2021</p></div>
+                <div class="slideshow-wrap">
+                    <div class="slideshow-container">
+                    <?php
+                    $args11 = array(
+                        'category_name' => 'gobierno',
+                        'posts_per_page' => 5
+                    );
+                    $query11 = new WP_Query( $args11 );
+
+                    if ( $query11->have_posts() ) : while ( $query11->have_posts() ) : $query11->the_post(); ?>
+                        <div class="slide fade">
+                            <div class="sd-image">
+                            <?php if ( has_post_thumbnail() ) { ?>
+                            <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'vs-medium-thumb' ); ?></a>
+                            <?php } else { echo '*Sin imagen representativa'; } ?>
+                            </div>
+                            <div class="item-info">
+                                <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+                                <span class="entry-date"><?php the_time('j F, Y') ?></span>
+                            </div>
+                        </div>
+                        <?php endwhile; ?>
+                    </div>
+                    <div style="text-align:center">
+                        <span class="dot"></span> 
+                        <span class="dot"></span> 
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+                <?php else: echo "<p>No se encontraron artículos.</p>";
+            endif; wp_reset_postdata(); ?>
+        </section>
+
         <?php dynamic_sidebar( 'sidebar-1' ); ?> 
         
     </div>

@@ -1,6 +1,7 @@
 <?php get_header(); ?>
 
 <div id="main-container">
+    <div class="banner-wrap-toggle"><?php dynamic_sidebar( 'banner-1' ); ?></div>
     <div id="newsfeed-style-lastestnews" class="clearfix">
        <?php 
         $numb_sticky_posts = sizeof( get_option( 'sticky_posts' ) );
@@ -48,7 +49,7 @@
             </div>
         <div class="col-third-animation-container big-grid-post-3">
        <?php else: ?>
-            <div class="col-third-animation-content medium-grid-post-1">
+            <div class="col-third-animation-content medium-grid-post">
                 <div class="post-img-bg">
                     <a href="<?php the_permalink(); ?>">
                     <?php if( has_post_thumbnail() ) { the_post_thumbnail( 'vs-custom-medium-thumb' ); } else { echo '<span>* Sin imagen representativa.</span>'; } ?>
@@ -65,17 +66,17 @@
         </div>
     </div>
     
-    <div class="banner-half-container">
+    <div class="banner-wrap">
         <?php dynamic_sidebar( 'banner-2' ); ?>
     </div>
     
     <div id="wrapper" class="clearfix">
         <div class="main-content">
 
-            <div class="col-twothirds-wrap clearfix">
-                <div class="col-twothirds-container">
+            <div class="col-thirds-wrap clearfix">
+                <div class="row-thirds-container">
                     <section class="category-third-container right-separator">
-                        <div class="column-header bl-vsorange"><p class="bg-vsorange">Congreso</p></div>
+                        <div class="col-header bl-vsorange"><p class="bg-vsorange">Congreso</p></div>
                         <div class="newsfeed-style-1">
                             <ul class="newsfeed-list-items clearfix">
                                 <?php
@@ -100,7 +101,7 @@
                         </div>
                     </section>
                     <section class="category-third-container">
-                        <div class="column-header bl-vsblue"><p class="bg-vsblue">Gobierno</p></div>
+                        <div class="col-header bl-vsblue"><p class="bg-vsblue">Gobierno</p></div>
                         <div class="newsfeed-style-1">
                             <ul class="newsfeed-list-items clearfix">
                                 <?php
@@ -126,9 +127,9 @@
                     </section>
                 </div>
 
-                <div class="col-twothirds-container">
+                <div class="row-thirds-container">
                     <section class="category-twothirds-container">
-                    <div class="column-header bl-vsred"><p class="bg-vsred">Justicia</p></div>
+                    <div class="col-header bl-vsred"><p class="bg-vsred">Justicia</p></div>
                     <div class="justice-news-container clearfix">
                     <?php
                     $args7 = array(
@@ -174,12 +175,14 @@
                 </div>
             </div>
 
-            <?php dynamic_sidebar( 'banner-3' ); ?>
+            <div class="banner-wrap">
+                <?php dynamic_sidebar( 'banner-3' ); ?>
+            </div>
 
-            <div class="col-twothirds-wrap clearfix">
-                <div class="col-twothirds-container">
+            <div class="col-thirds-wrap clearfix">
+                <div class="row-thirds-container">
                     <section class="category-third-container right-separator">
-                        <div class="column-header bl-vsdarkcyan"><p class="bg-vsdarkcyan">Salud</p></div>
+                        <div class="col-header bl-vsdarkcyan"><p class="bg-vsdarkcyan">Salud</p></div>
                         <div class="newsfeed-style-1">
                             <ul class="newsfeed-list-items clearfix">
                                 <?php
@@ -205,7 +208,7 @@
                     </section>
                     
                     <section class="category-third-container">
-                        <div class="column-header bl-vsgreen"><p class="bg-vsgreen">Educación</p></div>
+                        <div class="col-header bl-vsgreen"><p class="bg-vsgreen">Educación</p></div>
                         <div class="newsfeed-style-1">
                             <ul class="newsfeed-list-items clearfix">
                                 <?php
@@ -230,7 +233,7 @@
                         </div>
                     </section>
                     <section class="category-third-container right-separator">
-                        <div class="column-header bl-vsyellow"><p class="bg-vsyellow">Cultura</p></div>
+                        <div class="col-header bl-vsyellow"><p class="bg-vsyellow">Cultura</p></div>
                         <div class="newsfeed-style-1">
                             <ul class="newsfeed-list-items clearfix">
                                 <?php
@@ -256,7 +259,7 @@
                     </section>
                     
                     <section class="category-third-container">
-                        <div class="column-header bl-vspurple"><p class="bg-vspurple">Opinión</p></div>
+                        <div class="col-header bl-vspurple"><p class="bg-vspurple">Opinión</p></div>
                         <div class="newsfeed-style-1">
                             <ul class="newsfeed-list-items clearfix">
                                 <?php
@@ -282,31 +285,20 @@
                     </section>
                 </div>
             </div>
-            <div class="row-twothirds-container">
+            <div class="row-thirds-container">
                 <section class="row-large-video-container bg-vsblack">
                     <div class="video-wrap">
                         <p class="video-header">Video Notas</p>
-                        <?php echo do_shortcode('[yt_playlist mainid="7sKMPEw_dGU" vdid="HeXQB5x0QRY,h_JzP_7lafU,OdE-lgzovZE,urOaGW6f5KA,Ct2kOjL5obE,-abh8m1mAzc"]'); ?>
-<!--
-                        https://www.youtube.com/watch?v=7sKMPEw_dGU
-                        https://www.youtube.com/watch?v=HeXQB5x0QRY
-                        https://www.youtube.com/watch?v=h_JzP_7lafU
-                        https://www.youtube.com/watch?v=OdE-lgzovZE
-                        https://www.youtube.com/watch?v=urOaGW6f5KA
-                        https://www.youtube.com/watch?v=Ct2kOjL5obE
-                        https://www.youtube.com/watch?v=-abh8m1mAzc
--->
-<!--
-                        <div class="video-container">
-                            <iframe width="854" height="480" src="https://www.youtube.com/embed/urOaGW6f5KA?list=UUoc2dJY1Q5Eac959eW-nl1A" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
-                        </div>
--->
+                        <?php //echo do_shortcode('[yt_playlist mainid="7sKMPEw_dGU" vdid="HeXQB5x0QRY,h_JzP_7lafU,OdE-lgzovZE,urOaGW6f5KA,Ct2kOjL5obE,-abh8m1mAzc"]'); ?>
+                        <?php //echo do_shortcode('[yt_playlist mainid="wjttaL8y_DA" vdid="wjttaL8y_DA,xcJtL7QggTI,AheYbU8J5Tc,X0zGS4-UKgg,74SZXCQb44s,2M0XCH9q3YI"]'); ?>
+						<?php //echo do_shortcode( '[yt_feed channels="UCoc2dJY1Q5Eac959eW-nl1A" results="9"]' ); ?>
+						<?php echo do_shortcode( '[yt_playlist_v3 mainid="xcJtL7QggTI" vdid="xcJtL7QggTI,AheYbU8J5Tc,X0zGS4-UKgg,74SZXCQb44s,2M0XCH9q3YI"]' ); ?>
                     </div>
                 </section>
             </div>
-            <div class="row-twothirds-container">
+            <div class="row-thirds-container">
                 <section class="category-twothirds-container">
-                    <div class="column-header bl-vsgreen"><p class="bg-vsgreen">Audio Notas</p></div>
+                    <div class="col-header bl-vsgreen"><p class="bg-vsgreen">Audio Notas</p></div>
                     <div class="audio-container">
                         <iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/132032960&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
                     </div>

@@ -31,11 +31,15 @@ function wpdocs_theme_name_wp_title( $title, $sep ) {
 add_filter( 'wp_title', 'wpdocs_theme_name_wp_title', 10, 2 );
 
 function versus_scripts_styles() {
+    wp_enqueue_style( 'normalize', get_template_directory_uri() . '/css/normalize.css', array(), '8.0.1' );
     wp_enqueue_style( 'versus-style', get_stylesheet_uri(), array(), '3.4.5' );
     wp_enqueue_style( 'versus-mobile-style', get_template_directory_uri() . '/css/responsive.css', array(), '3.3.0' );
+    wp_enqueue_style( 'versus-slideshow', get_template_directory_uri() . '/css/slideshow_vstlx.css', array(), '1.0.0' );
     wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/font-awesome/css/font-awesome.min.css', array(), '4.7.0' );
-    wp_enqueue_script( 'versus-script', get_template_directory_uri() . '/js/main_nav.js', array(), '2.2.0' );
-    wp_enqueue_script( 'versus-timestamp-script', get_template_directory_uri() . '/js/date_hour.js', array(), '2.0.0', true );
+    // wp_enqueue_script( 'versus-script', get_template_directory_uri() . '/js/main_nav.js', array(), '2.2.0' );
+    wp_enqueue_script( 'test-script', get_template_directory_uri() . '/js/navigation.js', array(), '1.0', true );
+    wp_enqueue_script( 'versus-timestamp-script', get_template_directory_uri() . '/js/timestamp.js', array(), '0.0.1', true );
+    wp_enqueue_script( 'versus-slideshow-script', get_template_directory_uri() . '/js/slideshow_vstlx.js', array(), '2.2.0', true );
     if ( is_singular() )
         wp_enqueue_script( "comment-reply" );
 }
@@ -43,6 +47,7 @@ add_action( 'wp_enqueue_scripts', 'versus_scripts_styles' );
 
 add_theme_support( 'post-formats', array('audio','video'));
 add_theme_support( 'post-thumbnails' );
+add_theme_support( 'html5', array('search-form') );
 
 add_image_size( 'vs-medium-thumb', 360, 240, array( 'center', 'top' ) ); // 3:2 - 1.5
 add_image_size( 'vs-small-thumb', 120, 80, true );
@@ -64,7 +69,7 @@ function vs_widgets_setup() {
         'id' => 'sidebar-1',
         'before_widget' => '<section id="%1$s" class="widget %2$s">',
         'after_widget' => '</section>',
-        'before_title' => '<div class="column-header bl-vsblack"><p class="bg-vsblack">',
+        'before_title' => '<div class="col-header bl-vsblack"><p class="bg-vsblack">',
         'after_title' => '</p></div>',
     ));
 
@@ -73,31 +78,31 @@ function vs_widgets_setup() {
         'id' => 'sidebar-2',
         'before_widget' => '<section id="%1$s" class="widget %2$s">',
         'after_widget' => '</section>',
-        'before_title' => '<div class="column-header bl-vsblack"><p class="bg-vsblack">',
+        'before_title' => '<div class="col-header bl-vsblack"><p class="bg-vsblack">',
         'after_title' => '</p></div>',
     ));
 
     // Banners
     register_sidebar( array(
-        'name' => 'Banner 1',
+        'name' => 'Banner Cabecera',
         'id' => 'banner-1',
-        'before_widget' => '<div class="banner-top">',
+        'before_widget' => '<div class="banner">',
         'after_widget' => '</div>',
         'before_title' => '<span class="header-banner">',
         'after_title' => '</span>',
     ));
 
     register_sidebar( array(
-        'name' => 'Banner 2',
+        'name' => 'Banner Cuerpo 1',
         'id' => 'banner-2',
-        'before_widget' => '<div class="banner-half">',
+        'before_widget' => '<div class="banner">',
         'after_widget' => '</div>',
         'before_title' => '<span class="header-banner">',
         'after_title' => '</span>',
     ));
 
     register_sidebar( array(
-        'name' => 'Banner 3',
+        'name' => 'Banner Cuerpo 2',
         'id' => 'banner-3',
         'before_widget' => '<div class="banner">',
         'after_widget' => '</div>',
